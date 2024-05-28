@@ -1,0 +1,134 @@
+@import '../../global-styles/responsive';
+
+.call-room-page {
+
+    // height: 100vh;
+    width: 100%;
+    padding: 2%;
+    background-color: var(--black-text-color);
+
+    .meeting-heading {
+        font-size: 36px;
+        text-align: center;
+        color: var(--white-text-color);
+    }
+
+    
+
+    .videos-main-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        padding: 3%;
+
+        .video-cont {
+            width: 100%;
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--black-text-color-v2);
+            border-radius: 12px;
+
+            h3 {
+                color: var(--white-text-color);
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .remote-video-cont {
+            width: 100%;
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--black-text-color-v2);
+            border-radius: 12px;
+
+            h3 {
+                color: var(--white-text-color);
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .make-height-cont {
+            height: 400px;
+        }
+
+
+        @include xl {
+            flex-direction: row;
+
+            .video-cont{
+                width: 50%;
+            }
+
+            .remote-video-cont {
+                width: 25%;
+            }
+        }
+    }
+
+    .actions-div {
+        width: 100%;
+        position: fixed;
+        bottom: 30px;
+        // left: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .call-end-btn{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--red-color);
+
+            .icon {
+                color: var(--white-text-color);
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .call-btn{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--green-color);
+
+            .icon {
+                color: var(--white-text-color);
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .call-btn2 {
+            background-color: var(--sea-green-color);
+        }
+
+        .disabled {
+            background-color: var(--grey-text-color-v2);
+            cursor: default;
+        }
+    }
+
+    @include xl {
+        height: 100vh;
+    }
+    
+}

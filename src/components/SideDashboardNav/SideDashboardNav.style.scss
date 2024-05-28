@@ -1,0 +1,127 @@
+@import '../../global-styles/responsive';
+
+.side-dash-nav {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    .logo-cont {
+        display: none;
+        padding: 28px 0;
+        color: var(--white-text-color);
+        font-weight: bolder;
+    }
+
+    .nav-tab-cont {
+        width: 100%;
+        padding: 18px 15px;
+        text-decoration: none;
+
+        .nav-content-cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-cont {
+                margin-right: 0px;
+                .icon {
+                    height: 20px;
+                    width: 20px;
+                    color: var(--white-text-color);
+                    // width: 50px;
+                }
+            }
+            .nav-tab-title {
+                display: none;
+                color: var(--white-text-color);
+                font-size: 18px;
+                font-weight: bold;
+
+            }
+
+            @include md {
+                justify-content: flex-start;
+                padding-left: 5%;
+                .icon-cont {
+                    margin-right: 20px;
+                }
+                .nav-tab-title {
+                    display: block;
+                }
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--white-text-color);
+
+            .nav-content-cont {
+                .icon-cont {
+                    .icon {
+                        color: var(--royal-blue-color);
+                    }
+                }
+
+                .nav-tab-title {
+                    color: var(--royal-blue-color);
+                }
+            }
+
+        }
+
+
+    }
+
+    .nav-tab-cont-active {
+        width: 100%;
+        padding: 18px 15px;
+        cursor: pointer;
+        background-color: var(--white-text-color);
+        text-decoration: none;
+
+        .nav-content-cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-cont {
+                margin-right: 0px;
+                .icon {
+                    height: 20px;
+                    width: 20px;
+                    color: var(--royal-blue-color);                    
+                }
+            }
+
+            .nav-tab-title {
+                display: none;
+                color: var(--royal-blue-color);
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            @include md {
+                justify-content: flex-start;
+                padding-left: 5%;
+                .icon-cont {
+                    margin-right: 20px;
+                }
+                .nav-tab-title {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+
+
+    @include md {
+        .logo-cont {
+            display: block;
+        };
+    }
+
+}

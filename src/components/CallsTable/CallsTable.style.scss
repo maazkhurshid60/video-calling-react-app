@@ -1,0 +1,164 @@
+@import '../../global-styles/responsive';
+
+
+.calls-table-parent-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+
+    .calls-table {
+        width: 100%;
+        // height: 500px;
+        border-radius: 25px;
+        box-shadow: var(--royal-blue-box-shadow-color);
+        padding: 28px 40px;
+
+
+        .title-row-cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+
+            .title-cont {
+                font-size: 26px;
+                color: var(--bold-text-color);
+                font-weight: 900;
+            }
+
+            .search-filter-cont {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                
+
+                .search-cont {
+                    width: 80%;
+                    padding: 9px 16px;
+                    display: none;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 10px;
+                    background-color: var(--white-color-v2);
+                    border-radius: 23px;
+
+                    .icon {
+                        color: var(--search-text-color);
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .search {
+                        border: none;
+                        outline: none;
+                        width: inherit;
+                        background: transparent;
+                    }
+
+                    @include md {
+                        display: flex;
+                    }
+                }
+
+                .filter-cont {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 9px 16px;
+                    gap: 5px;
+                    background-color: var(--white-color-v2);
+                    border-radius: 23px;
+                    font-weight: bold;
+                }
+
+            }
+        }
+
+        .table-cont {
+            margin-bottom: 16px;
+            overflow-x: auto;
+
+            table {
+                width: 100%;
+                margin-bottom: 20px;
+
+                th {
+                    color: var(--royal-blue-color);
+                    font-weight: 900;
+                    border-radius: 27px;
+                    background-color: var(--light-blue-color);
+                }
+
+                th, td {
+                    padding: 22px 10px;
+                }
+
+                td {
+                    text-align: center;
+                }
+
+                #th-1 {
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+
+                #th-2, #th-3, #th-4{
+                    border-radius: 0px;
+                }
+
+                #th-5 {
+                    border-radius: 27px;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+
+                .sl-no {
+                    color: var(--search-text-color);
+                }
+                
+            }
+
+            .pagination-cont {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+                color: var(--normal-text-color);
+    
+                .prev-btn, .next-btn {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: var(--normal-text-color);
+                    font-weight: 900;
+                }
+
+                .number-cont {
+                    cursor: pointer;
+                    padding: 14px 18px;
+                    border-radius: 50%;
+                    font-weight: 900;
+                }
+
+                .active {
+                    color: white;
+                    background: var(--royal-blue-color);
+                }
+    
+                .icon {
+                    color: var(--normal-text-color);
+                    height: 16px;
+                    width: 16px;
+                }
+    
+            }
+        }
+
+    }
+
+}

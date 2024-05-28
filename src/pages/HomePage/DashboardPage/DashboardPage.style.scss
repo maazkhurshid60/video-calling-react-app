@@ -1,0 +1,120 @@
+@import '../../../global-styles/responsive';
+
+
+.dashboard-page {
+    padding: 22.5px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+
+    .cards-cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        .card {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 25px;
+            box-shadow: var(--royal-blue-box-shadow-color);
+
+
+            .row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                .icon-cont {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        height: 24px;
+                        width: 24px;
+
+                        @include md {
+                            height: 28px;
+                            width: 28px;
+                        }
+                    }
+                }
+
+                .content-cont {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 10px;
+
+                    h5 {
+                        color: var(--search-text-color);
+                    }
+
+                    p {
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: var(--bold-text-color);
+                    }
+                }
+
+                #i-cont-1 {
+                    background-color: var(--light-yellow-color);
+
+                    #ic-1 {
+                        color: var(--yellow-color);
+                    }
+                }
+
+                #i-cont-2 {
+                    background-color: var(--light-blue-color-v2);
+
+                    #ic-2 {
+                        color: var(--blue-color);
+                    }
+                }
+
+                #i-cont-3 {
+                    background-color: var(--light-red-color);
+
+                    #ic-3 {
+                        color: var(--red-color);
+                    }
+                }
+
+                #i-cont-4 {
+                    background-color: var(--light-sea-green-color);
+
+                    #ic-4 {
+                        color: var(--sea-green-color);
+                    }
+                }
+            }
+
+            @include md {
+                padding: 25px 37px;
+                width: auto;
+            }
+
+        }
+
+        @include md {
+            gap: 30px;
+        }
+
+    }
+
+    @include md {
+        padding: 45px 40px;
+    }
+
+}

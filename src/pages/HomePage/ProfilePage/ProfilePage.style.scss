@@ -1,0 +1,325 @@
+@import '../../../global-styles/responsive';
+
+.profile-page {
+    padding: 22.5px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+
+    .profile-cont {
+        width: 100%;
+        border-radius: 25px;
+        box-shadow: var(--royal-blue-box-shadow-color);
+        padding: 28px 40px;
+
+        .profile-title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 30px;
+
+            font-size: 26px;
+            font-weight: 900;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            gap: 22px;
+
+            .first-img-cont {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 300px;
+                width: 100%;
+                
+
+                .avatar-cont {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 130px;
+                    width: 130px;
+                    border-radius: 50%;
+                    border: 2px solid var(--royal-blue-color);
+                    // overflow: hidden;
+
+                    .img-cont {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 130px;
+                        width: 130px;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        img {
+                            width: inherit;
+                        }
+                    }
+                    
+                
+                    .avatar-icon {
+                        height: 70px;
+                        width: 70px;
+                        color: var(--royal-blue-color);
+                    }
+
+                    .edit-btn-cont {
+                        cursor: pointer;
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--royal-blue-color);
+    
+                        .icon {
+                            color: white;
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+
+                }
+
+            }
+
+            .second-form-p1-cont {
+                flex: 1;
+                // background-color: green;
+                // height: 300px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+
+                .row {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                    // height: 50px;
+                    // background-color: red;
+                    // margin-bottom: 22px;
+
+                    .col {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 10px;
+                        width: 100%;
+
+                        // select {
+                        //     appearance: none;
+                        // }
+
+                        .input-cont {
+                            width: 100%;
+                            border-radius: 39px;
+                            padding: 16px 20px;
+                            border: 2px solid var(--grey-text-color-v2);
+                        }
+
+    
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 900;
+                        color: var(--normal-text-color);
+                    }
+
+                    @include md {
+                        flex-direction: row;
+                        gap: 29px;
+
+                    }
+                }
+
+                @include md {
+                    .r-3 {
+                        width: 48%;
+                    }
+                }
+
+            }
+
+            @include md {
+                flex-direction: row;
+
+                .first-img-cont {
+                    flex: 0.2;
+                }
+
+                .second-form-p1-cont {
+                    flex: 0.8;
+                }
+
+            }
+
+        }
+
+        .action-btns {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 24px;
+            margin: 22px 0px;
+
+            .del-acc-btn {
+                order: 2;
+                cursor: pointer;
+                width: 100%;
+                border-radius: 36px;
+                padding: 18px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid var(--red-color);
+                color: var(--red-color);
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .save-acc-btn {
+                order: 1;
+                cursor: pointer;
+                width: 100%;
+                border: none;
+                border-radius: 36px;
+                padding: 18px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--royal-blue-color);
+                color: white;
+                font-weight: bold;
+            }
+
+            @include md {
+                flex-direction: row;
+                .del-acc-btn {
+                    width: 20%;
+                    order: 1;
+                }
+                .save-acc-btn {
+                    width: 20%;
+                    order: 2;
+                }
+            }
+        }
+
+    }
+
+    @include md {
+        padding: 45px 40px;
+    }
+
+    .delete-acc-modal {
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--modal-bg-color);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .delete-dialog {
+            margin: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            background-color: var(--white-text-color);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .upper-cont {
+                text-align: left;
+                margin-bottom: 10%;
+
+                .title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .actions-cont {
+                width: inherit;
+                padding: 10px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 20px;
+
+                .no-acc-btn {
+                    order: 1;
+                    cursor: pointer;
+                    width: 100%;
+                    border: none;
+                    border-radius: 36px;
+                    padding: 18px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid var(--royal-blue-color);
+                    background-color: white;
+                    color: var(--royal-blue-color);
+                    font-weight: bold;
+                }
+
+                .yes-acc-btn {
+                    order: 1;
+                    cursor: pointer;
+                    width: 100%;
+                    border: none;
+                    border-radius: 36px;
+                    padding: 18px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--red-color);
+                    color: white;
+                    font-weight: bold;
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
+.country-input {
+    padding: 0px;
+}

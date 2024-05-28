@@ -1,0 +1,192 @@
+@import '../../global-styles/responsive';
+
+.login-page {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-white-color);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .section-1 {
+        flex: 1;
+        height: 100vh;
+        padding: 0px 10px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--royal-blue-color);
+
+        .image {
+            height: auto;
+            width: 80%;
+        }
+    }
+
+    .section-2 {
+        height: 100vh;
+        width: 100%;
+        padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .logo-container {
+            margin: 42px 0px;
+
+            h2 {
+                font-weight: bolder;
+                font-size: xx-large;
+            }
+        }
+
+        .form-container {
+            width: 100%;
+            padding: 22px 25px;
+            border-radius: 16px;
+            margin-bottom: 18px;
+            box-shadow: var(--royal-blue-box-shadow-color);
+
+            .fm-title-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                .title {
+                    color: var(--royal-blue-color);
+                    font-size: 24px;
+                    font-weight: bolder;
+                }
+
+                .description {
+                    color: var(--black-text-color);
+                    font-size: 12px;
+                }
+
+                @include md {
+                    margin-bottom: 40px;
+                    .title {
+                        font-size: 32px;
+                    }
+    
+                    .description {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .fm-fields-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .field-wrapper {
+                    width: 100%;
+                    margin-bottom: 18px;
+                    .field {
+                        padding: 17px 18px;
+                        margin-bottom: 2px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+    
+                        border-radius: 45px;
+                        border: 1px solid var(--light-grey-color-v2);
+    
+                        .icon {
+                            width: 20px;
+                            height: 20px;
+                            
+                        }
+    
+                        .input-cont {
+                            width: 100%;
+                            margin: 0px 10px;
+                            .input-text {
+                                width: inherit;
+                                border: none;
+                                outline: none;
+                                background-color: transparent;
+                                color: var(--grey-text-color);
+                            }
+                        }
+    
+                        .password {
+                            cursor: pointer;
+                        }
+    
+                    }
+
+                    .errors {
+                        margin-left: 10px;
+                        color: var(--red-color);
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .forgot-pass-cont {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-bottom: 24px;
+    
+                color: var(--black-text-color);
+                font-size: 13px;
+
+                p {
+                    cursor: pointer;
+                }
+            }
+
+            .button {
+                cursor: pointer;
+                width: 100%;
+                padding: 15px;
+                border-radius: 46px;
+                border: none;
+                color: var(--white-text-color);
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .filled {
+                background-color: var(--royal-blue-color);
+            }
+
+            @include md {
+                width: 80%;
+                padding: 42px 51px;
+
+            }
+        }
+    }
+
+    @include md {
+        .section-1 {
+            flex: 1;
+            display: flex;
+            
+        }
+
+        .section-2 {
+            flex: 1;
+            justify-content: center;
+            .logo-container {
+                margin-top: 0px;
+                margin-bottom: 42px;
+            }
+        }
+    }
+}

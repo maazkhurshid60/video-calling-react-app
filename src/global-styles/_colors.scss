@@ -1,0 +1,44 @@
+:root {
+    // Background Color
+    --background-white-color: rgb(250, 250, 255);
+
+    // Global Royal Blue Color
+    --royal-blue-color: rgb(5, 2, 143);
+    --royal-blue-color-v2: rgb(5, 2, 143, 0.12);
+    
+
+    // Container White Color
+    --white-color-v2: rgb(245, 247, 250);
+
+    // Dashboard Cards Colors 
+    --light-blue-color: rgb(233, 239, 255);
+    --light-red-color: rgb(253, 221, 224);
+    --red-color: rgb(245, 61, 79);
+    --light-yellow-color: rgb(255, 245, 217);
+    --yellow-color: rgb(255, 187, 56);
+    --light-blue-color-v2: rgb(231, 237, 255);
+    --blue-color: rgb(57, 106, 255);
+    --light-sea-green-color: rgb(220, 250, 248);
+    --sea-green-color: rgb(22, 219, 204);
+    --light-green-color: rgb(206, 243, 214);
+    --green-color: rgb(56, 171, 82);
+    --light-grey-color-v2: rgb(116, 114, 122, 0.3);
+
+
+    // Text Colors
+    --black-text-color: rgb(38, 38, 38);
+    --black-text-color-v2: rgb(0, 0, 0, 0.6);
+    --normal-text-color: rgb(35, 35, 35);
+    --bold-text-color: rgb(27, 25, 38);
+    --search-text-color: rgb(113, 142, 191);
+    --grey-text-color: rgb(116, 114, 122);
+    --grey-text-color-v2: rgb(116, 114, 122, 0.2);
+    --white-text-color: rgb(255, 255, 255);
+
+    --modal-bg-color: rgba(35, 35, 35, 0.939);
+
+
+    // Box shadow
+    --royal-blue-box-shadow-color: 0px 0px 16px 0px var(--royal-blue-color-v2);
+
+}

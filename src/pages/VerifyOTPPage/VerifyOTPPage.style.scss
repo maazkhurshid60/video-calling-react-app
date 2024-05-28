@@ -1,0 +1,186 @@
+@import '../../global-styles/responsive';
+
+.verify-otp-page {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-white-color);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .section-1 {
+        flex: 1;
+        height: 100vh;
+        padding: 0px 10px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--royal-blue-color);
+
+        .image {
+            height: auto;
+            width: 80%;
+        }
+    }
+
+    .section-2 {
+        height: 100vh;
+        width: 100%;
+        padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .logo-container {
+            margin: 42px 0px;
+
+            h2 {
+                font-weight: bolder;
+                font-size: xx-large;
+            }
+        }
+
+        .form-container {
+            width: 100%;
+            padding: 22px 25px;
+            border-radius: 16px;
+            margin-bottom: 18px;
+            box-shadow: var(--royal-blue-box-shadow-color);
+
+            .otp-sent {
+                margin-bottom: 20px;
+                color: var(--royal-blue-color);
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .fm-title-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                .title {
+                    color: var(--royal-blue-color);
+                    font-size: 24px;
+                    font-weight: bolder;
+                }
+
+                .description {
+                    color: var(--black-text-color);
+                    font-size: 12px;
+                }
+
+                @include md {
+                    margin-bottom: 40px;
+                    .title {
+                        font-size: 32px;
+                    }
+    
+                    .description {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .vp-fm-fields-cont {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-bottom: 24px;
+
+                .field {
+                    width: 71px;
+                    height: 71px;
+                    margin-right: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    border-radius: 20px;
+                    border: 1px solid var(--light-grey-color-v2);
+
+                    .input-cont {
+                        width: 16px;
+                        .input-text {
+                            text-align: center;
+                            width: inherit;
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                            color: var(--grey-text-color);
+                            font-size: 28px;
+                            font-weight: bolder;
+                        }
+                    }
+
+                }
+
+            }
+
+            .resend-otp-cont {
+                margin-bottom: 24px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                color: var(--normal-text-color);
+
+                span {
+                    cursor: pointer;
+                    margin-left: 5px;
+                    color: var(--royal-blue-color);
+                    font-weight: bold;
+                }
+
+                .deactive-span {
+                    cursor: wait;
+                    color: var(--grey-text-color-v2);
+                }
+            }
+
+            .button {
+                cursor: pointer;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                border-radius: 46px;
+                color: var(--white-text-color);
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .filled {
+                background-color: var(--royal-blue-color);
+            }
+
+            @include md {
+                width: 80%;
+                padding: 42px 51px;
+
+            }
+        }
+    }
+
+    @include md {
+        .section-1 {
+            flex: 1;
+            display: flex;
+            
+        }
+
+        .section-2 {
+            flex: 1;
+            justify-content: center;
+            .logo-container {
+                margin-top: 0px;
+                margin-bottom: 42px;
+            }
+        }
+    }
+}
