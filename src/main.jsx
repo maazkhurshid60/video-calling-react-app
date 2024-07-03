@@ -18,7 +18,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from 'react-hot-toast'
 import VideoCallingApp from './VideoCallingApp.jsx'
 
-//Adding for Git activity
+//again Adding for Git activity
 
 const queryClient = new QueryClient();
 
