@@ -18,7 +18,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from 'react-hot-toast'
 import VideoCallingApp from './VideoCallingApp.jsx'
 
-//Changing this line for git activity
+//Adding this line for git activity
 
 const queryClient = new QueryClient();
 
@@ -39,4 +39,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-{/* <RouterProvider router={routes} /> */}
+{/* <RouterProvider router={routes} /> */ }
